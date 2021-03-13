@@ -24,6 +24,18 @@ ssh -f -g -N -L *:80:192.168.0.10:80 192.168.0.10
 ```
 
 -f: Go backgroung
+
 -g: Allows remote hosts to connect to local forwarded ports.
+
 -N: Do not execute a remote command.  This is useful for just forwarding ports.
+
 -L: Port forwardings (tunnel)
+
+
+If the install fails, you can check with:
+
+```bash
+virsh console HostedEngineLocal
+```
+
+login with root and test with curl and dnf proxy access.
