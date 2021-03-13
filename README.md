@@ -32,7 +32,7 @@ ssh -f -g -N -L *:80:192.168.0.10:80 192.168.0.10
 -L: Port forwardings (tunnel)
 
 
-If the install fails, you can check with:
+If install fails, you can check with:
 
 ```bash
 virsh console HostedEngineLocal
