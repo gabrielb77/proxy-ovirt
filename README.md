@@ -4,7 +4,11 @@
 
 a) Edit add_proxy_yum.yml with your setup
 
-b) Copy yml (add_proxy_yum.yml) file to /usr/share/ansible/collections/ansible_collections/ovirt/ovirt/roles/hosted_engine_setup/hooks/enginevm_before_engine_setup/
+b) Copy yml [add_proxy_yum.yml](add_proxy_yum.yml) file to:
+
+```bash
+/usr/share/ansible/collections/ansible_collections/ovirt/ovirt/roles/hosted_engine_setup/hooks/enginevm_before_engine_setup/
+```
 
 c) Launch:
 ```bash
