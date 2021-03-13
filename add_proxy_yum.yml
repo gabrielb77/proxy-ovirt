@@ -1,0 +1,27 @@
+---
+- name: Add proxy to yum
+  lineinfile:
+    path: /etc/yum.conf
+    line: proxy=http://proxyserver.local:80
+
+- name: Add proxy to env
+  blockinfile:
+    path: /etc/profile.d/proxy.sh
+    create: yes
+    block: |
+      export ProxySrv=http://proxyserver.local:80
+      export EngineFQDN=engine.local
+      export HostFQDN=ovirthost.local
+      export HTTP_PROXY=${ProxySrv}
+      export FTP_PROXY=${ProxySrv}
+      export https_proxy=${ProxySrv}
+      export http_proxy=${ProxySrv}
+      export HTTPS_PROXY=${ProxySrv}
+      export ftp_proxy=${ProxySrv}
+      export no_proxy=127.0.0.1,localhost,${HostFQDN},${EngineFQDN}
+      export NO_PROXY=127.0.0.1,localhost,${HostFQDN},${EngineFQDN}
+
+
+- name: Pause for check
+  pause:
+    minutes: 2
