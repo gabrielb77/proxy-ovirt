@@ -1,6 +1,6 @@
 # proxy-ovirt
 
-## Install hosted engine (HE) ovirt 4.4 behind proxy server
+## Install self hosted engine (HE) ovirt 4.4 behind proxy server
 
 a) Edit add_proxy_yum.yml with your setup
 
