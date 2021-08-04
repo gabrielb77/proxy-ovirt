@@ -10,6 +10,14 @@ b) Copy yml [add_proxy_yum.yml](add_proxy_yum.yml) file to:
 /usr/share/ansible/collections/ansible_collections/ovirt/ovirt/roles/hosted_engine_setup/hooks/enginevm_before_engine_setup/
 ```
 
+In add_proxy_yum.yml:
+# Set up proxy server address
+export ProxySrv=http://proxyserver.local:80
+# fqdn of the hosted engine deployed
+export EngineFQDN=engine.local
+# fqdn of your host, where you are doing this stuff
+export HostFQDN=ovirthost.local
+
 c) Launch:
 ```bash
 hosted-engine --deploy
