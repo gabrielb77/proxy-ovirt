@@ -24,4 +24,4 @@
 
 - name: Pause for check
   pause:
-    minutes: 2
+    seconds: 30
